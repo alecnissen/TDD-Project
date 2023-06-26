@@ -60,18 +60,31 @@ function caesarCipher(str, shift) {
 
         let letter = str[i];
 
-        console.log(letter);
+        // console.log(letter);
 
-        console.log(letter.charCodeAt());
+        // console.log(letter.charCodeAt());
+        // the number that correlates with the letter, a == 97 
+        let numberCharacter = str[i].charCodeAt(); 
 
-        let numberCharacter = str[i].charCodeAt();
+        // console.log(numberCharacter);
 
-        let shiftedCharacters = numberCharacter = numberCharacter + shiftFactor; 
+        // number code which represents the shift 
+        let shiftedCharacters = numberCharacter + shiftFactor; 
 
-        console.log(shiftedCharacters); 
+        // console.log(shiftedCharacters); 
+        
+        let returnShiftedLetter = String.fromCharCode(shiftedCharacters); 
+
+        // console.log(returnShiftedLetter);
+
+        result += returnShiftedLetter; 
+
+        // console.log(result);
+
 
     }
+    return result;
 }  
 
-console.log(caesarCipher('abc', 3));
+console.log(caesarCipher('def', 3));
 
