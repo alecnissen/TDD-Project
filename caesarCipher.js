@@ -71,12 +71,15 @@ function caesarCipher(str, shift) {
 
         let shiftedCharacters = (numberCharacter + shiftFactor);
 
-        if (shiftedCharacters >= 122) {
-            shiftedCharacters = (shiftedCharacters % 122) + 96
+        if (shiftedCharacters >= 90) { 
+            shiftedCharacters = (shiftedCharacters % 90) + 64;
+        } 
+
+        else if (shiftedCharacters >= 122) {
+            shiftedCharacters = (shiftedCharacters % 122) + 96;
          
         } 
 
-        
         
         let returnShiftedLetter = String.fromCharCode(shiftedCharacters); 
 
@@ -87,7 +90,7 @@ function caesarCipher(str, shift) {
     return result;
 }  
 
-console.log(caesarCipher('zab', 3));
+console.log(caesarCipher('ZAB', 3));
 
 
 
