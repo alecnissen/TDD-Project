@@ -46,45 +46,56 @@
 
 // how can I return the letter element with the shift applied? 
 
-let alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+// when it reaches the end set a equal to 0 
+
+// how can I ensure the str keeps looping, 
+
+// another loop, set aA to 0 and keeping looping? nested loop? 
+
+// 
+
+
+
+let alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",];
 
 function caesarCipher(str, shift) {
     let result = ''; 
 
     let shiftFactor = shift; 
 
-    // console.log(shiftFactor);
+    for (let i = 0; i < str.length; i++) {
 
-
-    for (let i = 0; i < str.length; i++) { 
-
-        let letter = str[i];
-
-        // console.log(letter);
-
-        // console.log(letter.charCodeAt());
-        // the number that correlates with the letter, a == 97 
         let numberCharacter = str[i].charCodeAt(); 
 
-        // console.log(numberCharacter);
+        console.log(numberCharacter);
 
-        // number code which represents the shift 
-        let shiftedCharacters = numberCharacter + shiftFactor; 
+        let shiftedCharacters = (numberCharacter + shiftFactor);
 
-        // console.log(shiftedCharacters); 
+        if (shiftedCharacters >= 122) {
+            shiftedCharacters = (shiftedCharacters % 122) + 96
+         
+        } 
+
+        
         
         let returnShiftedLetter = String.fromCharCode(shiftedCharacters); 
 
-        // console.log(returnShiftedLetter);
+        result += returnShiftedLetter;
 
-        result += returnShiftedLetter; 
+    } 
 
-        // console.log(result);
-
-
-    }
     return result;
 }  
 
-console.log(caesarCipher('def', 3));
+console.log(caesarCipher('zab', 3));
 
+
+
+
+// Don’t forget to test wrapping from z to a. 
+
+// how come when I enter z it does not begin to loop back over again? 
+
+// see if you can, loop through them again, 
+
+// post the alphabet again, 
