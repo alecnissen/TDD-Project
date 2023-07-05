@@ -157,7 +157,8 @@
 //       }
 //     }  
 
-function caesarcipher(letter, shift) {
+function caesarcipher(letter, shift) { 
+
     let letterCharCode = letter.charCodeAt();
     let shiftedCharCode = letterCharCode + shift;
     
@@ -175,17 +176,20 @@ function caesarcipher(letter, shift) {
         //some code here
         if (shiftedCharCode > 122) { 
             let remainder = (shiftedCharCode - 122);
-            let loopedOverCharCode = 97 + remainder;
-            let newLetter =  String.fromCharCode(loopedOverCharCode);
+            let loopedOverCharCode = 96 + remainder;
+            let newLetter = String.fromCharCode(loopedOverCharCode);
             return newLetter;
-        } 
+        } else if (shiftedCharCode < 122) { 
+            let newLetter = String.fromCharCode(shiftedCharCode);
+            return newLetter;
+        }
 
       }
     }
 
 
 
-    console.log(caesarcipher('a', 3));
+    console.log(caesarcipher('C', 2));
 
 
 
