@@ -155,7 +155,9 @@
 //         let newLetter = String.fromCharCode(shiftedCharCode); 
 //         return newLetter;
 //       }
-//     }  
+//     }   
+
+
 
 function caesarcipher(letter, shift) { 
 
@@ -185,11 +187,38 @@ function caesarcipher(letter, shift) {
         }
 
       }
+
+      // conditional may go here, 
     }
 
 
 
-    console.log(caesarcipher('C', 2));
+    console.log(caesarcipher('Z', 10)); 
+
+    module.exports = caesarcipher;
+
+
+// PUNCUATION PLAN: 
+
+// I think find the numeric number of the period 
+
+// use the same logic to get it to loop back, to the start of the alphabet, 
+
+// starting at 'A' because the capital letters are the closest, 
+
+// 46 looks like the numeric number for the period, 
+
+
+// you need it to start at 65 again, use the same logic as above, 
+
+
+// I think use another else statement, check if the number is 
+
+// I think I will begin to write the tests, then hopefully by that time, I will get some clarification. 
+
+// begin writing tests for uppercase, lower case as well as a shift factor. 
+
+
 
 
 
