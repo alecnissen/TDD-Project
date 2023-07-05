@@ -186,11 +186,12 @@ function caesarcipher(letter, shift) {
             return newLetter;
         } 
       } 
+      return letter; 
     }
 
 
 
-    console.log(caesarcipher('A', 4)); 
+    console.log(caesarcipher('m', 3)); 
 
     module.exports = caesarcipher;
 

@@ -68,19 +68,63 @@
 
 // I am able to access the array but why am I not able to apply the Math operators to it??? 
 
-// 
+// why am I getting NAN, I am 
+
+// can we make a result variable, loop thru the array, add to the result 
+
+// then set a variable so we can determine the min value
+
+// what I am now trying to do is, get the min value of the array 
+
+// I set the input array to a variable, 
+
+// then I will loop, add onto a result variable, then take the min value
+
+// confused on why math.min is not working, I've tried using spread operator, 
+
+// but it only works when I pass in the array instead of a variable containing the array 
+
+// try average, 
 
 function analyzeArray(array) { 
+    let sum = 0; 
+
     let inputArray = array; 
 
-    let inputArrayLength = inputArray.length; 
+    let inputArrayLength = inputArray.length;
+
+    // let minValue = Math.min(...[1, 8, 3, 4, 2, 6]); 
+
+    // let minValue = Math.min([...inputArray]); 
+
+    // console.log(minValue); 
+
+    for (let i = 0; i < inputArray.length; i++) { 
+        let num = inputArray[i];
+
+        sum += num;
+    } 
+
+    let avg = (sum / inputArrayLength); 
+
+    console.log(avg);
 
     return { 
+        average: avg,
         length: inputArrayLength,
-        // max: maxValue,
-    }
-}
+    } 
+} 
 
-const object = analyzeArray([1,8,3,4,2,6]);
+// console.log(analyzeArray([1,8,3,4,2,6]));
 
-console.log(analyzeArray(object));
+ const array = analyzeArray([1, 8, 3, 4, 2, 6]);
+
+console.log(analyzeArray(array)); 
+
+// let x = [1, 10, 60];
+
+// let minValue = Math.min.apply(x);
+
+// console.log(minValue);
+
+// console.log(Math.min(10, 20, 30));
