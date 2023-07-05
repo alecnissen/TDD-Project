@@ -184,16 +184,13 @@ function caesarcipher(letter, shift) {
         } else if (shiftedCharCode < 122) { 
             let newLetter = String.fromCharCode(shiftedCharCode);
             return newLetter;
-        }
-
-      }
-
-      // conditional may go here, 
+        } 
+      } 
     }
 
 
 
-    console.log(caesarcipher('Z', 10)); 
+    console.log(caesarcipher('A', 4)); 
 
     module.exports = caesarcipher;
 
