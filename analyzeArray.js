@@ -86,6 +86,12 @@
 
 // try average, 
 
+// trying to find the average in the array, 
+
+// I think instead of doing the calculation, 
+
+// return it using the math method 
+
 function analyzeArray(array) { 
     let sum = 0; 
 
@@ -93,33 +99,31 @@ function analyzeArray(array) {
 
     let inputArrayLength = inputArray.length;
 
-    // let minValue = Math.min(...[1, 8, 3, 4, 2, 6]); 
-
-    // let minValue = Math.min([...inputArray]); 
-
-    // console.log(minValue); 
-
     for (let i = 0; i < inputArray.length; i++) { 
         let num = inputArray[i];
 
         sum += num;
     } 
+    
+    let avg = sum / inputArrayLength; // it needed to be outside of the loop, 
 
-    let avg = (sum / inputArrayLength); 
+    // scope issue, avg was getting updated each time with the latest value, 
+
+    // place outside of the loop, then call the function just once. 
 
     console.log(avg);
 
     return { 
         average: avg,
         length: inputArrayLength,
-    } 
+    };
 } 
-
-// console.log(analyzeArray([1,8,3,4,2,6]));
 
  const array = analyzeArray([1, 8, 3, 4, 2, 6]);
 
-console.log(analyzeArray(array)); 
+console.log(array); 
+
+// you were calling the function again, 
 
 // let x = [1, 10, 60];
 
@@ -127,4 +131,19 @@ console.log(analyzeArray(array));
 
 // console.log(minValue);
 
-// console.log(Math.min(10, 20, 30));
+// console.log(Math.min(10, 20, 30)); 
+
+
+let sum = 0 
+
+let arr = [9, 1, 2, 3];
+
+for (let i = 0; i < arr.length; i++) { 
+    let num = arr[i];
+
+    sum += num; 
+} 
+
+let avg = sum / arr.length; 
+
+console.log(avg);
