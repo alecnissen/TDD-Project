@@ -94,34 +94,53 @@
 
 function analyzeArray(array) { 
     let sum = 0; 
-
-    let inputArray = array; 
-
+    let inputArray = array;
     let inputArrayLength = inputArray.length;
-
     for (let i = 0; i < inputArray.length; i++) { 
         let num = inputArray[i];
-
         sum += num;
     } 
     
     let avg = sum / inputArrayLength; // it needed to be outside of the loop, 
 
+    // let newArr = [...inputArray];
+
+    let minNumber = Math.min(...inputArray); 
+
+    let maxNumber = Math.max(...inputArray);
+
+
+    // console.log(newArr);
+
+    console.log(maxNumber);
+
     // scope issue, avg was getting updated each time with the latest value, 
 
     // place outside of the loop, then call the function just once. 
-
-    console.log(avg);
-
     return { 
         average: avg,
         length: inputArrayLength,
+        min: minNumber,
+        max: maxNumber
     };
 } 
 
  const array = analyzeArray([1, 8, 3, 4, 2, 6]);
 
 console.log(array); 
+
+// Nex I will figure out min, 
+
+// I think you will need to use some type of method, 
+
+// like math.min, but remeber before it wa returning not a number, 
+
+// is there a way to just return the object with the min value? 
+
+
+
+
+
 
 // you were calling the function again, 
 
@@ -134,16 +153,16 @@ console.log(array);
 // console.log(Math.min(10, 20, 30)); 
 
 
-let sum = 0 
+// let sum = 0 
 
-let arr = [9, 1, 2, 3];
+// let arr = [9, 1, 2, 3];
 
-for (let i = 0; i < arr.length; i++) { 
-    let num = arr[i];
+// for (let i = 0; i < arr.length; i++) { 
+//     let num = arr[i];
 
-    sum += num; 
-} 
+//     sum += num; 
+// } 
 
-let avg = sum / arr.length; 
+// let avg = sum / arr.length; 
 
-console.log(avg);
+// console.log(avg);
