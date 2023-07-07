@@ -112,7 +112,13 @@ function analyzeArray(array) {
 
     // console.log(newArr);
 
-    console.log(maxNumber);
+    console.log(inputArrayLength);
+
+    console.log(minNumber);
+
+    console.log(maxNumber); 
+
+    console.log(avg);
 
     // scope issue, avg was getting updated each time with the latest value, 
 
@@ -128,6 +134,8 @@ function analyzeArray(array) {
  const array = analyzeArray([1, 8, 3, 4, 2, 6]);
 
 console.log(array); 
+
+module.exports = analyzeArray;
 
 // Nex I will figure out min, 
 
